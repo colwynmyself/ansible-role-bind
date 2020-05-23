@@ -1,6 +1,8 @@
 # roles/bind/defaults/main.yml
 ---
 
+# bind_port: 53
+
 bind_log: "data/named.run"
 
 bind_zone_domains:

@@ -67,3 +67,7 @@
     state: started
     enabled: true
   tags: bind
+
+- name: Flush BIND cache
+  shell: rndc flush
+  tags: bind
