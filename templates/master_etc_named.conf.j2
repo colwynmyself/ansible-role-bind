@@ -12,8 +12,8 @@ acl "{{ acl.name }}" {
 
 {% endfor %}
 options {
-  listen-on port 53 { {{ bind_listen_ipv4|join('; ') }}; };
-  listen-on-v6 port 53 { {{ bind_listen_ipv6|join('; ') }}; };
+  listen-on port {{ bind_port }} { {{ bind_listen_ipv4|join('; ') }}; };
+  listen-on-v6 port {{ bind_port }} { {{ bind_listen_ipv6|join('; ') }}; };
   directory   "{{ bind_dir }}";
   dump-file   "{{ bind_dir }}/data/cache_dump.db";
   statistics-file "{{ bind_dir }}/data/named_stats.txt";
